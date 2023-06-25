@@ -1,0 +1,18 @@
+.p1{
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+  }
+.pend{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    
+    font-size: small;
+    font-weight:normal
+
+}
+.pend a{
+    margin: 0 10px 0 10px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+    <div id="app">
+      <el-container>
+        <el-header>
+          <el-row :gutter="20">
+            <el-col :span="10" :offset="0">
+              <div class="icon"> <a href="../pages/index.html">HOME</a></div>
+            </el-col>
+            <el-col :span="14" :offset="0">
+              <el-col :span="6"  :offset="0" v-for="i in iterms" >
+                <a :href="i.link">
+                  {{i.text}}
+                </a>
+              </el-col>
+            </el-col>
+          </el-row>
+        </el-header>
+
+        <el-row :gutter="20" style="margin: 57px;">
+            <el-col :span="18" :offset="4" >
+                  <el-collapse v-model="activeName" accordion  >
+                    <el-collapse-item title="如何浏览并选择艺术品和家居装饰品" name="1" >
+                        <div>在我们的网站上，您可以通过不同的浏览方式来寻找您喜欢的艺术品和家居装饰品。您可以浏览不同的分类，如绘画、摄影、雕塑等，或者根据您的兴趣和风格偏好进行筛选。此外，我们还提供搜索功能，您可以根据关键词或艺术家姓名来查找特定的作品。浏览过程中，您可以点击每个商品了解更多详细信息，包括尺寸、材质、艺术家简介等。</div>
+                        <div>当您发现心仪的艺术品或家居装饰品时，您可以将其加入购物车，并继续浏览其他商品。在购物车中，您可以核对您的选择并进行必要的调整。完成购物后，您可以选择结账并提供必要的配送信息。我们将确保您的商品在安全的包装中送达您的家门口。</div>
+                    </el-collapse-item>
+                    <el-collapse-item title="关于艺术品与家居装饰品的品质保证" name="2">
+                      <div>我们非常重视艺术品和家居装饰品的品质。在我们的网站上，我们只提供经过严格筛选和认证的艺术品和家居装饰品。我们与优秀的艺术家、设计师和供应商合作，确保每件商品都具有独特的艺术价值和卓越的制作工艺。</div>
+                      <div>为了保证您的满意度，我们提供详细的商品描述和高清的产品图片，以便您更好地了解和欣赏每件商品。此外，我们还提供灵活的退换货政策，如果您对收到的商品不满意或有任何质量问题，您可以联系我们的客服团队，我们将竭诚为您解决问题。</div>
+                    </el-collapse-item>
+                    <el-collapse-item title="订购和配送信息" name="3">
+                      <div>在我们的网站上订购商品非常简便。在您选择了心仪的艺术品和家居装饰品后，点击购物车，然后按照页面上的指引完成结账过程。您需要提供您的配送地址和联系方式等信息。我们将确保您的个人信息安全，并将其仅用于订单处理和配送。</div>
+                      <div>关于配送，我们与可靠的物流合作伙伴合作，以确保您的商品安全送达。我们将尽快处理您的订单，并提供订单跟踪功能，以便您随时了解配送进度。请注意，国际配送可能需要更长的时间，具体取决于目的地和海关的要求。</div>
+                    </el-collapse-item>
+                    <el-collapse-item title="联系我们和客户支持" name="4">
+                      <div>如果您在浏览和购物的过程中遇到任何问题，或对商品、订单、配送等有任何疑问，我们的客户支持团队随时为您提供帮助。您可以通过网站上提供的联系方式，如在线聊天、电子邮件或电话，与我们取得联系。我们将尽快回复您的咨询并提供满意的解答。</div>
+                      <div>我们非常重视客户的反馈和建议，以不断改进我们的服务和产品。如果您对我们的网站有任何意见或建议，欢迎您与我们分享。您的意见对我们来说非常宝贵，帮助我们提供更好的用户体验和更优质的商品。</div>
+                    </el-collapse-item>
+                  </el-collapse>
+            </el-col>
+        </el-row>
+        
+     
+        
+
+        <el-footer>
+          <el-row :gutter="0">
+            <el-col :span="24" :offset="0">
+              <p class="p1">{{end}}</p>
+            </el-col>
+            <el-col :span="24" :offset="0" class="pend">
+              <p class="pend" v-for="i in endhelp">
+                <a :href="i.link">{{i.text}}</a>
+              </p>
+            
+            </el-col>
+            
+          </el-row>
+          
+        </el-footer>
+      </el-container>
+     
+    </div>
+</body>
+
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../index.js"></script>
+
+</html>

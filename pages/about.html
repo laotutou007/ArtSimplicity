@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+    <div id="app">
+      <el-container>
+        <el-header>
+          <el-row :gutter="20">
+            <el-col :span="10" :offset="0">
+              <div class="icon"> <a href="../pages/index.html">HOME</a></div>
+            </el-col>
+            <el-col :span="14" :offset="0">
+              <el-col :span="6"  :offset="0" v-for="i in iterms" >
+                <a :href="i.link">
+                  {{i.text}}
+                </a>
+              </el-col>
+            </el-col>
+          </el-row>
+        </el-header>
+     
+        <el-row style="margin: 38px;">
+            <el-col  :md="8" xs="10" :offset="0">
+                <img src="../imgs/10.jpg" alt="">
+              </el-col>
+            <el-col :md="16" xs="14"  :offset="0" style="padding-right: 20px;">
+              <h1>
+                当艺术与家居完美结合：创造梦幻空间</h1>
+              <p>当艺术与家居完美结合，创造出令人心动的空间，每一天都变成了一幅美丽的画面。欢迎来到我们的网站，这里汇聚了最独特、精美的艺术品和家居装饰品，为您打造一个独一无二的家居体验。
+
+              </p>
+            </el-col>
+           
+          </el-row>
+
+
+          <el-row style="margin: 38px;">
+            <el-col :md="16" xs="14"  :offset="0" style="padding-right: 20px;">
+              <h1>发现世界各地的艺术之美：精湛作品集结</h1>
+              <p>我们深知艺术对于家居氛围的重要性，它可以让空间焕发生机，展现个人品味与风格。在这里，您将发现来自世界各地的艺术家们所创作的精湛作品，无论是绘画、雕塑还是摄影，每件作品都饱含着他们独特的灵感和情感。</p>
+            </el-col>
+            <el-col  :md="8" xs="10" :offset="0">
+                <img src="../imgs/23.jpg" alt="">
+            </el-col>
+          </el-row>
+
+
+          <el-row style="margin: 38px;">
+            <el-col :md="24" xs="24"  :offset="0" style="padding-right: 20px;">
+              <h1>每一个细节改变氛围：精心挑选与设计的品质保证</h1>
+              <p>无论您是寻找一件独特的艺术品来装饰您的客厅，还是希望找到一套精美的家居用品来营造温馨的卧室，我们都能满足您的需求。我们的团队将竭诚为您提供专业的建议和个性化的服务，帮助您实现您的家居艺术梦想。</p>
+            </el-col>
+          </el-row>
+
+        <el-footer>
+          <el-row :gutter="0">
+            <el-col :span="24" :offset="0">
+              <p class="p1">{{end}}</p>
+            </el-col>
+            <el-col :span="24" :offset="0" class="pend">
+              <p class="pend" v-for="i in endhelp">
+                <a :href="i.link">{{i.text}}</a>
+              </p>
+            
+            </el-col>
+            
+          </el-row>
+          
+        </el-footer>
+      </el-container>
+     
+    </div>
+</body>
+
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../index.js"></script>
+<script src="../js/login.js"></script>
+</html>

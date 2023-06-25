@@ -1,0 +1,53 @@
+.p1{
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+  }
+.pend{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    
+    font-size: small;
+    font-weight:normal
+
+}
+.pend a{
+    margin: 0 10px 0 10px;
+}
+
+/* ------------------- */
+
+
+.time {
+    font-size: 13px;
+    color: #999;
+  }
+  
+  .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+  .button {
+    padding: 0;
+    float: right;
+  }
+
+  .image {
+    width: 100%;
+    display: block;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+      display: table;
+      content: "";
+  }
+  
+  .clearfix:after {
+      clear: both;
+     
+  }
+

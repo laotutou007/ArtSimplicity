@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "阿里妈妈方圆体 VF Regular";
+    src: url("../阿里妈妈方圆体/AlimamaFangYuanTiVF-Thin.woff2") format("woff2"),
+         url("../阿里妈妈方圆体/AlimamaFangYuanTiVF-Thin.woff") format("woff");
+    font-display: swap;
+}
+* {
+    font-family: '阿里妈妈方圆体 VF Regular', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    /* border-bottom: 1px solid red; */
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(110, 87, 87); /* 鼠标悬停时的链接颜色 */
+    
+  }
+body{
+    background-color: #F2EFE7;
+}
+header{
+    margin-top: 20px;
+}
+
+.icon{
+    /* background-color: #1b1313; */
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.el-card__body, .el-main {
+    padding: 0;
+}
+
+

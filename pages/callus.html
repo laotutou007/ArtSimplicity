@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+    <div id="app">
+      <el-container>
+        <el-header>
+          <el-row :gutter="20">
+            <el-col :span="10" :offset="0">
+              <div class="icon"> <a href="../pages/index.html">HOME</a></div>
+            </el-col>
+            <el-col :span="14" :offset="0">
+              <el-col :span="6"  :offset="0" v-for="i in iterms" >
+                <a :href="i.link">
+                  {{i.text}}
+                </a>
+              </el-col>
+            </el-col>
+          </el-row>
+        </el-header>
+     
+       <el-row :gutter="20">
+            <el-col :span="2" :offset="0">⠀</el-col>
+            <el-col :span="20" :offset="0">
+                <el-form ref="form" :model="form" label-width="80px">
+                    <el-form-item label="活动名称">
+                      <el-input v-model="form.name"></el-input>
+                    </el-form-item>
+                    <el-form-item label="活动区域">
+                      <el-select v-model="form.region" placeholder="请选择活动区域">
+                        <el-option label="区域一" value="shanghai"></el-option>
+                        <el-option label="区域二" value="beijing"></el-option>
+                      </el-select>
+                    </el-form-item>
+                    <el-form-item label="活动时间">
+                      <el-col :span="11">
+                        <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
+                      </el-col>
+                      <el-col class="line" :span="1">-</el-col>
+                      <el-col :span="12">
+                        <el-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
+                      </el-col>
+                    </el-form-item>
+                    <el-form-item label="选择组团">
+                      <el-switch v-model="form.delivery"></el-switch>
+                    </el-form-item>
+                    <el-form-item label="活动性质">
+                      <el-checkbox-group v-model="form.type">
+                        <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+                        <el-checkbox label="地推活动" name="type"></el-checkbox>
+                        <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+                        <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+                      </el-checkbox-group>
+                    </el-form-item>
+                    <el-form-item label="特殊资源">
+                      <el-radio-group v-model="form.resource">
+                        <el-radio label="线上品牌商赞助"></el-radio>
+                        <el-radio label="线下场地免费"></el-radio>
+                      </el-radio-group>
+                    </el-form-item>
+                    <el-form-item label="活动形式">
+                      <el-input type="textarea" v-model="form.desc"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                      <el-button type="primary" @click="onSubmit">立即创建</el-button>
+                      <el-button>取消</el-button>
+                    </el-form-item>
+                  </el-form>
+            </el-col>
+            <el-col :span="2" :offset="0">⠀</el-col>
+       </el-row>
+       
+       
+        <el-footer>
+          <el-row :gutter="0">
+            <el-col :span="24" :offset="0">
+              <p class="p1">{{end}}</p>
+            </el-col>
+            <el-col :span="24" :offset="0" class="pend">
+              <p class="pend" v-for="i in endhelp">
+                <a :href="i.link">{{i.text}}</a>
+              </p>
+            
+            </el-col>
+            
+          </el-row>
+          
+        </el-footer>
+      </el-container>
+     
+    </div>
+</body>
+
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../index.js"></script>
+<script src="../js/login.js"></script>
+</html>

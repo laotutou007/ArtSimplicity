@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body style="background-color: white;">
+    <div id="app" >
+      <el-container>
+        <el-header>
+          <el-row :gutter="20">
+            <el-col :span="10" :offset="0">
+              <div class="icon"> <a href="../pages/index.html">HOME</a></div>
+            </el-col>
+            <el-col :span="14" :offset="0">
+              <el-col :span="6"  :offset="0" v-for="i in iterms" >
+                <a :href="i.link">
+                  {{i.text}}
+                </a>
+              </el-col>
+            </el-col>
+          </el-row>
+        </el-header>
+     
+        <el-row style="margin: 38px;">
+            <p>我们相信每一个细节都能改变一个空间的氛围，所以我们精心挑选和设计每一件商品，力求给您带来最好的品质和体验。通过我们的网站，您可以轻松浏览和购买您喜欢的艺术品和家居装饰品，我们将确保它们安全地送到您的家门口。
+            </p>
+            <br>
+            <p>艺术是我们的热情所在，每一位艺术家的作品都是一次对美的追求。他们的创作将想象力与技艺完美融合，为您呈现令人屏息的视觉盛宴。从抽象绘画到写实摄影，从雕塑艺术到装置艺术，每一件作品都散发着无与伦比的魅力与独特性。</p>
+            <div class="block">
+                <span class="demonstration">评分</span>
+                <el-rate  
+                  v-model="value2"
+                  :colors="colors">
+                </el-rate>
+            </div>
+           
+        </el-row>
+       
+        <el-footer>
+          <el-row :gutter="0">
+            <el-col :span="24" :offset="0">
+              <p class="p1">{{end}}</p>
+            </el-col>
+            <el-col :span="24" :offset="0" class="pend">
+              <p class="pend" v-for="i in endhelp">
+                <a :href="i.link">{{i.text}}</a>
+              </p>
+            
+            </el-col>
+            
+          </el-row>
+          
+        </el-footer>
+      </el-container>
+     
+    </div>
+</body>
+
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../index.js"></script>
+
+</html>
